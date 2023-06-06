@@ -1,39 +1,40 @@
-p{
-  font-size: large;
+body {
+  background-color: #FCE8F3;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+p.heading {
+  text-align: center;
+  font-size: 40px;
+  font-family: "Arial", sans-serif;
+  color: #FF69B4;
+  margin-bottom: 20px;
+}
+
+p {
+  font-family: "Arial", sans-serif;
+  font-size: 18px;
   font-weight: 600;
   opacity: 0.9;
+  color: #333333;
 }
 
-button{
+button {
+  background-color: #FF69B4;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
   cursor: pointer;
-}
-
-#dialog{
-  width:300px;
-}
-
-.right{
-  margin-left: 120px;
-}
-
-.pic1{
-  margin-left: 3vw;
-}
-
-#bocchi2 {
-  position: absolute;
-   left: 45%;
-    top: 511px;
-    
-    /* top: 521px;
-  left: 53%; */
-
-}
-
-.heading{
-  text-align: center;
-  font-size: 35px;
-  font-family: Candara, Oswald;
+  margin: 10px 0;
 }
 
 .pic {
@@ -42,33 +43,45 @@ button{
   width: 25%;
 }
 
-  
-#bocchi1 {
-  position: fixed;
-  top: 521px;
-  left: 53%;
-  transform: translate(-50%, -50%);
+#dialog {
+  width: 400px;
+  margin: 0 auto;
 }
 
-@media (max-width:480px) {
-  .heading{
-      font-size: 29px;
+.right {
+  margin-left: 120px;
+}
+
+.pic1 {
+  margin-left: 3vw;
+}
+
+#bocchi2 {
+  position: absolute;
+  left: 45%;
+  top: 511px;
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 29px;
   }
 
   .pic {
-      width: 75%;        
+    width: 75%;        
   }
 
   #bocchi1 {
-      top: 432px;
-      left: 65%;
+    top: 432px;
+    left: 65%;
   }
 
   #bocchi2 {
-       left: 35%;
-       top: 421px;
+    left: 35%;
+    top: 421px;
   }
-  .pic1{
-      margin-left: 11vw;
+
+  .pic1 {
+    margin-left: 11vw;
   }
 }

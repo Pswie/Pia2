@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>You n Me</title>
   <link rel="stylesheet" href="partner.css">
-
   <style>
     body {
       background-color: #FCE8F3;
@@ -59,17 +58,24 @@
     }
 
     .right {
-      margin-left: 120px;
+      margin-left: 10px;
     }
 
     .pic1 {
       margin-left: 3vw;
     }
 
+    .buttons-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
     #bocchi2 {
       position: absolute;
-      left: 45%;
-      top: 511px;
+      left: 50%;
+      bottom: 20px;
+      transform: translateX(-50%);
     }
 
     @media (max-width: 480px) {
@@ -97,42 +103,21 @@
     }
   </style>
 
-  <button tabindex="-1" id="bocchi2">NO</button>
-  <script>
-    const button2 = document.getElementById('bocchi2');
-    let left = 40;
-    button2.addEventListener('mouseover', function() {
-      if (left == 40) {
-        left = 35;
-      } else {
-        left = 40;
-      }
-      this.style.left = left + '%';
-    });
-    if (window.matchMedia("(max-width: 700px)").matches) {
-      let left = 30;
-      button2.addEventListener('mouseenter', function() {
-        if (left == 30) {
-          left = 15;
-        } else {
-          left = 30;
-        }
-        this.style.left = left + '%';
-      });
-    }
-  </script>
 </head>
 <body class="container">
   <p class="heading">Vuoi venire al mare con me Domenica?</p>
-  <img class="pic" src="https://media.tenor.com/zGm5acSjHCIAAAAM/cat-begging.gif" alt="Immagine estiva">
+  <img class="pic" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmNhYWE5ZjliYTQ2NTA0NTViYWFmN2FiOGE4YWRiNjc5OWMyMmZjZCZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/7y4Nc95399hsr24oYc/giphy.gif" alt="Immagine estiva">
 
-  <button id="bocchi1" onclick="openModal()">OVVIO CHE SI</button>
+  <div class="buttons-container">
+    <button id="bocchi1" onclick="openModal()">OVVIO CHE SI</button>
+    <button id="bocchi2" onclick="handleNoClick()">NO</button>
+  </div>
 
   <dialog id="dialog">
-    <img class="pic1" src="Sofy.jpg" width="210px" height="250px" alt="Immagine estiva">
+    <img class="pic1" src="https://img1.picmix.com/output/stamp/normal/6/4/8/0/1560846_7d540.gif" width="210px" height="250px" alt="Immagine estiva">
     <br/>
-    <center><p>Sei Sofyissima!</p></center>
-    <button onclick="closeModal()" class="right">close ><</button>
+    <center><p>&#x1F493;&#x1F493;&#x1F493;</p></center>
+    <button onclick="closeModal()" class="right">close &lt;&lt;</button>
   </dialog>
 
   <script>
@@ -144,6 +129,10 @@
 
     function closeModal() {
       dialog.close();
+    }
+
+    function handleNoClick() {
+      alert("Hai detto NO! :(");
     }
   </script>
 </body>
